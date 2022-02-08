@@ -1,0 +1,28 @@
+button{
+    border-color: aqua;
+}
+body{
+    display: grid;
+    grid-template-columns: 20vw 40vw 40vw ;
+    grid-template-rows: 10vw auto 5vw;
+    grid-template-areas: 
+    'log nav .'
+    'man man man'
+    'fot fot fot';
+}
+.logo{
+    grid-area: log;
+}
+.top{
+    grid-area: nav;
+}
+main{
+    grid-area: man;
+}
+footer{
+    grid-area: fot;
+}
+.buttons{
+    display: flex;
+    
+}
