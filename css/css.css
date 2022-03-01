@@ -1,28 +1,108 @@
-button{
-    border-color: aqua;
-}
-body{
-    display: grid;
-    grid-template-columns: 20vw 40vw 40vw ;
-    grid-template-rows: 10vw auto 5vw;
-    grid-template-areas: 
-    'log nav .'
-    'man man man'
-    'fot fot fot';
-}
+/*general*/
+
 .logo{
     grid-area: log;
 }
 .top{
     grid-area: nav;
+    display: flex;
+    justify-content: space-around;
 }
+.top a{
+    background-color: rgb(162, 190, 190);
+    width: 40%;
+    text-align: center;
+    
+    border-radius: 1rem;
+}
+h2{
+    
+} 
 main{
     grid-area: man;
-}
+}   
 footer{
     grid-area: fot;
 }
-.buttons{
-    display: flex;
+
+
+/*general*/
+/*desktop*/
+
+body{
+    display: grid;
+    grid-template-columns: 20vw 40vw 40vw ;
+    grid-template-rows: 10vh 85vh 5vh;
+    grid-template-areas: 
+    'log nav .'
+    'man man man'
+    'fot fot fot';
+}
+
+.buttons button{
+    border-color: aqua;
+    height: 30vh;
+    width: 40vw;
+    margin-top: 5vh;
+    border-radius: 3rem;
+    border-width: 1rem;
+    text-align: left;
     
 }
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+/*recept*/
+
+.buttons .focus{
+    width: 80vw;
+    min-height: 80vh;
+    position: fixed;
+    align-self: center;
+    transition: 0.5s;
+}
+
+
+/*recept*/
+/*desktop*/
+/*mobile*/
+@media screen and (max-width:500px){
+    .buttons button{
+        height: 20vh;
+        width: 90vw;
+        margin-top: 5vh;
+        border-radius: 1rem;
+        border-width: 1rem;
+        
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+
+        flex-wrap: wrap;
+    
+    }
+    body{
+
+        grid-template-columns: 50vw ;
+        grid-template-rows: 10vh 7vh auto 5vh;
+        grid-template-areas: 
+        'log'
+        'nav'
+        'man'
+        'fot';
+    }
+
+    /*recept*/
+    .buttons .focus{
+
+
+    }
+    /*recept*/
+    
+}
+/*mobile*/
