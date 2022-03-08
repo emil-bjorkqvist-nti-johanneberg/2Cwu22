@@ -60,12 +60,41 @@ body{
 
 .buttons .focus{
     width: 80vw;
-    min-height: 80vh;
+    height: 80vh;
     position: fixed;
     align-self: center;
-    transition: 0.5s;
+    transition: 0.4s;
+    display: grid;
+    grid-template-columns: 3vw 29.5vw 5vw 32.5vw ;
+    grid-template-rows: 15vh 45vh 3vh auto;
+    grid-template-areas: 
+    '. nam . how'
+    '. ing . how'
+    '. . . .'
+    'bld bld bld bld';
+    z-index: 3;
+}
+.ingredients{
+    grid-area: ing;
+}
+.how{
+    grid-area: how;
 }
 
+.back{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    align-self:center;
+    z-index: -10;
+
+}
+.back.focus{
+    color: aqua;
+    display: block;
+    z-index: 2;
+}
 
 /*recept*/
 /*desktop*/

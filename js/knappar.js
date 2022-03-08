@@ -1,7 +1,15 @@
 
+
+let back = document.querySelector(".back")
+back.addEventListener("click",goback)
+function goback(){
+    let focused = document.querySelector(".focus")
+    focused.classList.remove("focus")
+    back.classList.toggle("focus")
+}
 function focus(recept){
-    recept.classList.toggle("focus")
-    
+    recept.classList.add("focus")
+    back.classList.add("focus")
 }
 //workaround 
 function bonrorafunk(){
