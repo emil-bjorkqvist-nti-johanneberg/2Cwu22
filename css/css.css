@@ -28,7 +28,12 @@ footer{
 
 /*general*/
 /*desktop*/
-
+.logo{
+    background-image: url(../img/logo.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 body{
     display: grid;
     grid-template-columns: 20vw 40vw 40vw ;
@@ -77,6 +82,24 @@ body{
 .ingredients{
     grid-area: ing;
 }
+.hiden{
+    display: none;
+}
+
+.image{
+    grid-area: bld;
+    display: none;
+    
+}
+#bonrorra{
+    background-image: url(img\bonrora-komprimerad.jpg);
+}
+.focus#bonrora .image{
+    display: block;
+    background-image: url(2Cwu22\img\bonrora-komprimerad.jpg);
+}
+
+
 .how{
     grid-area: how;
 }
@@ -99,7 +122,19 @@ body{
 /*recept*/
 /*desktop*/
 /*mobile*/
-@media screen and (max-width:500px){
+@media screen and (max-width:600px){
+    body{
+        grid-template-columns: 100vw ;
+        grid-template-rows: 10vh 7vh auto 5vh;
+        grid-template-areas: 
+        'log'
+        'nav'
+        'man'
+        'fot';
+    }
+    .top {
+
+    }
     .buttons button{
         height: 20vh;
         width: 90vw;

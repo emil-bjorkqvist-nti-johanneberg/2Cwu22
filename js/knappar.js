@@ -15,7 +15,7 @@ function focus(recept){
 function bonrorafunk(){
     focus(bonrora)
 }
-let bonrora = document.querySelector("#bönröra")
+let bonrora = document.querySelector("#bonrora")
 bonrora.addEventListener("click",bonrorafunk)
 
 function bonburgarefunk(){
