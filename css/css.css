@@ -10,13 +10,15 @@
 }
 .top a{
     background-color: rgb(162, 190, 190);
-    width: 40%;
+    min-width: 40%;
     text-align: center;
     
     border-radius: 1rem;
 }
 h2{
-    
+
+    font-size: 1rem;
+    color: black;
 } 
 main{
     grid-area: man;
@@ -37,7 +39,7 @@ footer{
 body{
     display: grid;
     grid-template-columns: 20vw 40vw 40vw ;
-    grid-template-rows: 10vh 85vh 5vh;
+    grid-template-rows: 10vh auto 5vh;
     grid-template-areas: 
     'log nav .'
     'man man man'
@@ -46,12 +48,16 @@ body{
 
 .buttons button{
     border-color: aqua;
-    height: 30vh;
+    max-height: 30vh;
+    min-height: 30vh;
     width: 40vw;
     margin-top: 5vh;
     border-radius: 3rem;
     border-width: 1rem;
     text-align: left;
+    transition: max-height 1s ease-out;
+    transition: width 1s ease-in-out;
+    overflow: hidden;
     
 }
 .buttons{
@@ -63,12 +69,13 @@ body{
 }
 /*recept*/
 
+
+
+
 .buttons .focus{
     width: 80vw;
-    height: 80vh;
-    position: fixed;
-    align-self: center;
-    transition: 0.4s;
+    max-height: 1000vh;
+    transition: max-height 1s ease-in;
     display: grid;
     grid-template-columns: 3vw 29.5vw 5vw 32.5vw ;
     grid-template-rows: 15vh 45vh 3vh auto;
@@ -81,9 +88,18 @@ body{
 }
 .ingredients{
     grid-area: ing;
-}
-.hiden{
     display: none;
+}
+.focus .ingredients{
+    display: block;
+}
+
+.metod{
+    grid-area: how;
+    display: none;
+}
+.focus .metod{
+    display: block;
 }
 
 .image{
@@ -91,12 +107,12 @@ body{
     display: none;
     
 }
-#bonrorra{
-    background-image: url(img\bonrora-komprimerad.jpg);
+#bonrora{
+    background-image: url(..\img\bonrora-komprimerad.jpg);
 }
 .focus#bonrora .image{
     display: block;
-    background-image: url(2Cwu22\img\bonrora-komprimerad.jpg);
+    background-image: url(..\2Cwu22\img\bonrora-komprimerad.jpg);
 }
 
 
@@ -104,26 +120,13 @@ body{
     grid-area: how;
 }
 
-.back{
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position:fixed;
-    align-self:center;
-    z-index: -10;
-
-}
-.back.focus{
-    color: aqua;
-    display: block;
-    z-index: 2;
-}
 
 /*recept*/
 /*desktop*/
 /*mobile*/
 @media screen and (max-width:600px){
     body{
+        
         grid-template-columns: 100vw ;
         grid-template-rows: 10vh 7vh auto 5vh;
         grid-template-areas: 
@@ -132,9 +135,21 @@ body{
         'man'
         'fot';
     }
-    .top {
-
+    .back{
+        display: none;
+        width: 5vw;
+        height: 5vh;
+        position:fixed;
+        
+        z-index: -10;
+    
     }
+    .back.focus{
+        color: aqua;
+        display: block;
+        z-index: 2;
+    }
+    
     .buttons button{
         height: 20vh;
         width: 90vw;
@@ -150,20 +165,11 @@ body{
         flex-wrap: wrap;
     
     }
-    body{
-
-        grid-template-columns: 50vw ;
-        grid-template-rows: 10vh 7vh auto 5vh;
-        grid-template-areas: 
-        'log'
-        'nav'
-        'man'
-        'fot';
-    }
+    
 
     /*recept*/
     .buttons .focus{
-
+        width: 95vw;
 
     }
     /*recept*/

@@ -8,8 +8,8 @@ function goback(){
     back.classList.toggle("focus")
 }
 function focus(recept){
-    recept.classList.add("focus")
-    back.classList.add("focus")
+    recept.classList.toggle("focus")
+
 }
 //workaround 
 function bonrorafunk(){
