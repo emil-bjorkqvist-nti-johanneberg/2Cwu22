@@ -9,10 +9,10 @@
     justify-content: space-around;
 }
 .top a{
-    background-color: rgb(162, 190, 190);
+    background-color: rgba(255, 255, 255, 0.623);
     min-width: 40%;
     text-align: center;
-    
+    text-decoration: unset;
     border-radius: 1rem;
 }
 h2{
@@ -35,6 +35,9 @@ footer{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: rgba(124, 245, 245, 0.658);
+    border-radius: 1rem;
+    margin-bottom: 0rem;
 }
 body{
     display: grid;
@@ -44,6 +47,8 @@ body{
     'log nav .'
     'man man man'
     'fot fot fot';
+    background-color: rgb(43, 2, 2);
+    background-image:url(../img/Beanground.jpg);
 }
 
 .buttons button{
@@ -65,7 +70,19 @@ body{
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-
+    
+}
+main{
+    background-color: rgba(50, 187, 205, 0.644);
+    border-radius: 1rem;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+footer{
+    background-color: rgba(255, 255, 255, 0.61);
+    border-radius: 1rem;
+    padding: 3px;
+    margin: 5px;
 }
 /*recept*/
 
@@ -78,7 +95,7 @@ body{
     transition: max-height 1s ease-in;
     display: grid;
     grid-template-columns: 3vw 29.5vw 5vw 32.5vw ;
-    grid-template-rows: 15vh 45vh 3vh auto;
+    grid-template-rows: 15vh minmax(45vh auto)  3vh auto;
     grid-template-areas: 
     '. nam . how'
     '. ing . how'
@@ -122,6 +139,54 @@ body{
 
 
 /*recept*/
+/*om mig*/
+#om_mig_grid{
+    display: grid;
+    grid-template-columns: 1fr 20vh;
+    grid-template-rows: 40vh minmax(90vh auto);
+    grid-template-areas: 
+    'info mig'
+    'frag frag';
+}
+#info{
+    grid-area: info;
+    background-color: rgba(255, 255, 255, 0.479);
+    border-radius: 1rem ;
+}
+#fragor{
+    grid-area: frag;
+    display: flex;
+    flex-direction: column;
+}
+#portratt{
+    grid-area: mig;
+}
+#fragor article{
+    width: 60vw;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 80px;
+    border-color: rgb(211, 203, 203);
+    padding: 1rem;
+    border-style:outset;
+    border-width: 1rem;
+    margin: 1rem;
+    
+}
+.svar{
+    align-self: flex-end;
+}
+/*om mig*/
+/*om bönor*/
+#bonor_grid{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: minmax(90vh auto);
+    grid-template-areas: 
+    'txt bld';
+}
+
+/*om bönor*/
 /*desktop*/
 /*mobile*/
 @media screen and (max-width:600px){
@@ -170,6 +235,7 @@ body{
     /*recept*/
     .buttons .focus{
         width: 95vw;
+        height: auto;
 
     }
     /*recept*/
